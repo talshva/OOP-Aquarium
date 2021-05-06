@@ -1,0 +1,65 @@
+<head>
+    <title>Aquarium 🐠</title>
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/fireworks.css">
+    <link href="https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;700&display=swap" rel="stylesheet">
+
+</head>
+
+<body onload="init()">
+    <br>
+
+    <div class="container">
+        <h1>My OOP Aquarium</h1>
+        <div id="dialog">
+        </div>
+        <h3 class="turns">turn:<label id="turns">
+        0</label>
+        </h3>
+
+        <br>
+        <button class="button" onclick="playGen()">Start</button>
+        <button class="button" onclick="stopGen()">Stop</button>
+        
+        <span>🐢</span>
+            <input id="slider" type="range" min="0" max="500" step="100" value="100"
+             title="speed dial" onclick = "stopGen() , playGen()" onkeydown="stopGen() , playGen()">
+            <span>🐇 </span>
+
+        <h2>
+        <button class="button" onclick="nextTurn(), renderBoard()">Next Turn</button>
+        </h2>
+        
+        <button class="addAnimal" onclick=" addAnimal(1)">🐟 Scalar</button> 
+        <button class="addAnimal" onclick=" addAnimal(2)">🐠 Moly</button> 
+        <button class="addAnimal" onclick=" addAnimal(3)">🦐 Shrimp</button> 
+        <button class="addAnimal" onclick=" addAnimal(4)">🦀Ocypode</button> 
+        <h2>
+            <div class="liveMsg">
+                You lost a life, try again
+            </div>
+        </h2>
+
+        <button class="newGame" onclick="init(), stopGen()">Reset the Aquarium</button>
+        <br>
+        <p>Aqua size:</p>
+        <div>
+            <button class="levels" onclick="changeSize(15,10)" style="cursor: pointer">small</button>
+            <button class="levels" onclick="changeSize(25,15)" style="cursor: pointer">Medium</button>
+            <button class="levels" onclick="changeSize(40,20)" style="cursor: pointer"> Big</button>
+
+        </div>
+        <table id="center">
+            <tbody class="board">
+            </tbody>
+        </table>
+
+
+    </div>
+
+    <script src="js/Game.js"></script>
+   
+    
+</body>
+
+</html>
