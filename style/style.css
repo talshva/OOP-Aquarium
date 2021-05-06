@@ -88,6 +88,7 @@ table {
     margin: auto;
     left: 50%;
     border-radius: 30px;
+    border-collapse: collapse;
 }
 
 .cell {
@@ -97,8 +98,8 @@ table {
     height: 40px;
     text-align: center;
     cursor: pointer;
-    box-shadow: 1px 1px 1px #bbbbbb;
 }
+
 .cellfliped {
     transform: rotateY(180deg);
 }
